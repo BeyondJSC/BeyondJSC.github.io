@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>梦鱼的博客，读书笔记，前端-建站过程中踩过的坑 | 梦鱼的博客</title>
+
+  <!-- keywords -->
+  
+    <meta name="keywords" content="梦鱼的博客，读书笔记，前端">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="没有踩过坑的程序猿，不是好的程序猿">
+<meta name="keywords" content="梦鱼的博客，读书笔记，前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="建站过程中踩过的坑">
+<meta property="og:url" content="http://BeyondJSC.github.io/2018/08/31/建站过程中踩的坑/index.html">
+<meta property="og:site_name" content="梦鱼的博客">
+<meta property="og:description" content="没有踩过坑的程序猿，不是好的程序猿">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-08-31T07:14:51.384Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="建站过程中踩过的坑">
+<meta name="twitter:description" content="没有踩过坑的程序猿，不是好的程序猿">
+  
+    <link rel="alternative" href="/atom.xml" title="梦鱼的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://www.dreamfish.online/img/logo_s.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+      <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("d6CNiUa2evYj0XUWSbI3CxY5-gzGzoHsz", "SK5PXdS93cAKOhwtGfS6yfnV");</script>
+<script src="/js/Counter.js"></script>
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://www.dreamfish.online/img/logo_s.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">BeyondJSC</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">一只有梦想的咸鱼</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/BeyondJSC" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="/mail" title="mail">mail</a>
+					        
+								<a class="qq" target="_blank" href="/qq" title="qq">qq</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://znanjie.github.io">组长的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">BeyondJSC</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://www.dreamfish.online/img/logo_s.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">BeyondJSC</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">一只有梦想的咸鱼</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/BeyondJSC" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="/mail" title="mail">mail</a>
+			        
+						<a class="qq" target="_blank" href="/qq" title="qq">qq</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-建站过程中踩的坑" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/31/建站过程中踩的坑/" class="article-date">
+  	<time datetime="2018-08-31T05:20:15.000Z" itemprop="datePublished">2018-08-31</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      建站过程中踩过的坑
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/杂文/">杂文</a>
+	</div>
+
+
+        
+          
+<div class="counter-tag counter">
+    <span id="/2018/08/31/建站过程中踩的坑/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="建站过程中踩过的坑">
+         &nbsp;
+        view
+    </span>
+</div>
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>没有踩过坑的程序猿，不是好的程序猿</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​    这次搭建博客是在deepin系统下完成的，开发前需要准备的环境如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">deepin</span> <span class="number">15.6</span></span><br><span class="line">	<span class="bullet">-</span> <span class="attr">git:</span> <span class="string">v2.13.3</span></span><br><span class="line">	<span class="bullet">-</span> <span class="attr">node:</span> <span class="string">v10.8.0</span></span><br><span class="line">	<span class="bullet">-</span> <span class="attr">npm:</span> <span class="string">v6.2.0</span></span><br><span class="line"><span class="string">aliyun</span> <span class="string">ecs</span> <span class="string">centos</span> <span class="number">7.4</span><span class="number">.2</span></span><br><span class="line">	<span class="bullet">-</span> <span class="attr">git:</span> <span class="string">v1.8.3.1</span></span><br><span class="line">	<span class="bullet">-</span> <span class="attr">nginx:</span> <span class="string">v1.14.0</span></span><br></pre></td></tr></table></figure>
+<h2 id="博客配置"><a href="#博客配置" class="headerlink" title="博客配置"></a>博客配置</h2><h3 id="记录一下站点相关的配置"><a href="#记录一下站点相关的配置" class="headerlink" title="记录一下站点相关的配置"></a>记录一下站点相关的配置</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">梦鱼的博客</span>		<span class="string">//</span> <span class="string">网站标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">一只有梦想的咸鱼</span>			<span class="string">//</span> <span class="string">网站副标题</span>    </span><br><span class="line"><span class="attr">description:</span> <span class="string">人一定要有梦想，即使是咸鱼也要做最咸的那一条</span>			<span class="string">//</span> <span class="string">网站描述</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="string">梦鱼的博客，读书笔记，前端</span>			<span class="string">//</span> <span class="string">网站关键字</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">BeyondJSC</span>			<span class="string">//</span> <span class="string">网站作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span>			<span class="string">//</span> <span class="string">网站使用语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span>			<span class="string">//</span> <span class="string">网站时区</span></span><br></pre></td></tr></table></figure>
+<h3 id="deploy相关配置，第一个为git地址，-第二个是服务器地址"><a href="#deploy相关配置，第一个为git地址，-第二个是服务器地址" class="headerlink" title="deploy相关配置，第一个为git地址， 第二个是服务器地址"></a>deploy相关配置，第一个为git地址， 第二个是服务器地址</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span> 		<span class="string">//</span> <span class="string">如果有多个配置，type前面要加</span> <span class="bullet">-</span> </span><br><span class="line"><span class="attr">- type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:BeyondJSC/BeyondJSC.github.io.git</span> </span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br><span class="line"><span class="attr">- type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">git@www.dreamfish.online:hexo.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<h3 id="网站文章阅读数配置"><a href="#网站文章阅读数配置" class="headerlink" title="网站文章阅读数配置"></a>网站文章阅读数配置</h3><p>​    说明： 我使用的是smackdown这个博客主题</p>
+<ul>
+<li><p>首先要在leancloud上申请一个免费账号</p>
+</li>
+<li><p>创建一个类，类名为Counter</p>
+</li>
+<li><p>在安全中心配置web安全域名</p>
+</li>
+<li><p>将App ID、App Key配置到smackdown主题下_config.yml下</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#是否开启文章阅读量</span></span><br><span class="line"><span class="attr">leancloud_visitors:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  app_id:</span> <span class="string">d6CNiUa2evYj0XUWSbI3CxY5-gzGzoHsz</span></span><br><span class="line"><span class="attr">  app_key:</span> <span class="string">SK5PXdS93cAKOhwtGfS6yfnV</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="测试相关命令"><a href="#测试相关命令" class="headerlink" title="测试相关命令"></a>测试相关命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean			// 清除可能带有的public文件夹</span><br><span class="line">hexo g			// hexo generate的简写，用于生成静态文件夹“public”</span><br><span class="line">hexo s [option] 		// hexo server [option]的简写，用于开启本地测试服务，默认地址为localhost：4000，相关参数配置，见官网</span><br></pre></td></tr></table></figure>
+<h2 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h2><h3 id="GitHub上："><a href="#GitHub上：" class="headerlink" title="GitHub上："></a>GitHub上：</h3><ul>
+<li>新建一个仓库，规则为：username.github.io</li>
+<li>开启GitPage，<a href="https://www.cnblogs.com/jackyroc/p/7681938.html" target="_blank" rel="noopener">参考教程</a></li>
+<li>预览在第二步选择的主题</li>
+</ul>
+<h3 id="部署到git上"><a href="#部署到git上" class="headerlink" title="部署到git上"></a>部署到git上</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d		// hexo deploy的简写，会依次执行配置文件中deploy</span><br></pre></td></tr></table></figure>
+<h2 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h2><h3 id="配置default-conf文件"><a href="#配置default-conf文件" class="headerlink" title="配置default.conf文件"></a>配置default.conf文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       80;</span><br><span class="line">    server_name  www.dreamfish.online;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        root   /var/www/hexo;</span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    error_page   500 502 503 504  /50x.html;</span><br><span class="line">    location = /50x.html &#123;</span><br><span class="line">        root   /usr/share/nginx/html;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h3><ul>
+<li><p>创建git用户</p>
+<ul>
+<li>执行： adduser git，并且设置密码</li>
+</ul>
+</li>
+<li><p>赋予git用户sudo权限</p>
+<ul>
+<li><p>执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod 740 /etc/sudoers</span><br><span class="line">vim /etc/sudoers</span><br></pre></td></tr></table></figure>
+<p>找到以下内容</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> User privilege specification</span><br><span class="line">root    ALL=(ALL:ALL) ALL</span><br></pre></td></tr></table></figure>
+<p>在root  ALL=(ALL:ALL)  ALL这一行下面添加git ALL=(ALL:ALL)  ALL， 如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> User privilege specification</span><br><span class="line">root    ALL=(ALL:ALL) ALL</span><br><span class="line">git ALL=(ALL:ALL)  ALL</span><br></pre></td></tr></table></figure>
+<p>保存退出后， 修改回文件权限chmod 440 /etc/sudoers</p>
+</li>
+</ul>
+</li>
+<li><p>关闭git用户的shell权限</p>
+<ul>
+<li><p>执行：vim /etc/passwd</p>
+</li>
+<li><p>将最后一行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git:x:1001:1001:,,,:/home/git:/bin/bash</span><br></pre></td></tr></table></figure>
+<p>修改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>初始化git仓库</p>
+<ul>
+<li><p>切换到git用户 su git</p>
+</li>
+<li><p>然后：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /home/git                //切换到git用户目录</span><br><span class="line">mkdir hexo.git              //创建git仓库文件夹，以hexo.git为例</span><br><span class="line">cd hexo.git             //进入仓库目录</span><br><span class="line">git init --bare             //使用--bare参数初始化为裸仓库，这样创建的仓库不包含工							//作区</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>创建网站根目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /var/www/                //切换目录</span><br><span class="line">mkdir hexo              //创建网站目录，以hexo为例</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置ssh</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /home/git                //切换到git用户目录</span><br><span class="line">mkdir .ssh              //创建.ssh目录</span><br><span class="line">cd .ssh</span><br><span class="line">vim authorized_keys</span><br></pre></td></tr></table></figure>
+<p>然后将本地的公钥复制到authorized_keys文件里</p>
+</li>
+<li><p>用户组管理</p>
+<ul>
+<li><p>执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ll /home/git/</span><br><span class="line">ll /var/www/</span><br></pre></td></tr></table></figure>
+<p>确保blog.git、.ssh、blog目录的用户组权限为git ：git    </p>
+<p>若不是，可以执行以下命令在查看：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chown git:git -R /var/www/hexo</span><br><span class="line">sudo chown git:git -R /home/git/hexo.git</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>配置Git Hooks</p>
+<ul>
+<li><p>创建post-receive文件</p>
+<p>git用户下执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/git/hexo.git/hooks     //切换到hooks目录下</span><br><span class="line">vim post-receive            //创建文件</span><br></pre></td></tr></table></figure>
+<p>复制以下内容到post-receive文件中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">GIT_REPO=/home/git/hexo.git</span><br><span class="line">TMP_GIT_CLONE=/tmp/hexo</span><br><span class="line">PUBLIC_WWW=/var/www/hexo</span><br><span class="line">rm -rf $&#123;TMP_GIT_CLONE&#125;</span><br><span class="line">git clone $GIT_REPO $TMP_GIT_CLONE</span><br><span class="line">rm -rf $&#123;PUBLIC_WWW&#125;/*</span><br><span class="line">cp -rf $&#123;TMP_GIT_CLONE&#125;/* $&#123;PUBLIC_WWW&#125;</span><br></pre></td></tr></table></figure>
+<p>保存退出后， 执行：chmod +x post-receive赋予可执行权限</p>
+</li>
+</ul>
+</li>
+<li><p>本地操作</p>
+<ul>
+<li><p>尝试连接</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ssh git@www.dreamfish.online</span><br><span class="line">Last login: Thu Aug 30 20:38:37 2018 from 221.233.24.49</span><br><span class="line"></span><br><span class="line">Welcome to Alibaba Cloud Elastic Compute Service !</span><br><span class="line"></span><br><span class="line">fatal: Interactive git shell is not enabled.</span><br><span class="line">hint: ~/git-shell-commands should exist and have read and execute access.</span><br><span class="line">Connection to www.dreamfish.online closed.</span><br></pre></td></tr></table></figure>
+<p>如图所示，则连接成功</p>
+</li>
+<li><p>配置hexo，见上depoly配置</p>
+<p>到此，hexo建站全部完毕</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ul>
+<li>typora的安装，一个非常好用的markdown文章编辑器<ul>
+<li>deepin下的<a href="https://blog.csdn.net/zhangziju/article/details/80531501" target="_blank" rel="noopener">安装方式</a></li>
+<li>其他环境下的安装方式，请自行baidu/google</li>
+</ul>
+</li>
+<li>这是本站正真意义上的第一篇文章，加油！！！</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/31/初衷/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">建站的初衷</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2018 BeyondJSC
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
