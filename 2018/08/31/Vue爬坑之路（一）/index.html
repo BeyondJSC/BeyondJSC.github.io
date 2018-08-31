@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>梦鱼的博客，读书笔记，前端-Vue爬坑之路（一） | 梦鱼的博客</title>
+
+  <!-- keywords -->
+  
+    <meta name="keywords" content="梦鱼的博客，读书笔记，前端">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="简单却不失优雅，小巧而不乏大匠      ​    Vue.js是一个JavaScript MVVM库，是一套构建用户界面的渐进式框架。它以数据驱动和组件化的思想构建，采用自底向上增量开发的设计。相比于Angular.js，Vue.js提供了更加简洁，更易于理解的API，使得我们能够快速上手并且使用Vue.js；同时比起React + Redux相对复杂的结构，Vue.js更加轻量级也更加容易上">
+<meta name="keywords" content="前端，Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue爬坑之路（一）">
+<meta property="og:url" content="http://BeyondJSC.github.io/2018/08/31/Vue爬坑之路（一）/index.html">
+<meta property="og:site_name" content="梦鱼的博客">
+<meta property="og:description" content="简单却不失优雅，小巧而不乏大匠      ​    Vue.js是一个JavaScript MVVM库，是一套构建用户界面的渐进式框架。它以数据驱动和组件化的思想构建，采用自底向上增量开发的设计。相比于Angular.js，Vue.js提供了更加简洁，更易于理解的API，使得我们能够快速上手并且使用Vue.js；同时比起React + Redux相对复杂的结构，Vue.js更加轻量级也更加容易上">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://img-blog.csdn.net/20170604172815171?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VieGlhb21h/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="https://img-blog.csdn.net/20170604175120514?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VieGlhb21h/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="https://img-blog.csdn.net/20170604180151326?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VieGlhb21h/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2018-08-31T09:12:33.982Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue爬坑之路（一）">
+<meta name="twitter:description" content="简单却不失优雅，小巧而不乏大匠      ​    Vue.js是一个JavaScript MVVM库，是一套构建用户界面的渐进式框架。它以数据驱动和组件化的思想构建，采用自底向上增量开发的设计。相比于Angular.js，Vue.js提供了更加简洁，更易于理解的API，使得我们能够快速上手并且使用Vue.js；同时比起React + Redux相对复杂的结构，Vue.js更加轻量级也更加容易上">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20170604172815171?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VieGlhb21h/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+  
+    <link rel="alternative" href="/atom.xml" title="梦鱼的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://www.dreamfish.online/img/logo_s.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+      <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("d6CNiUa2evYj0XUWSbI3CxY5-gzGzoHsz", "SK5PXdS93cAKOhwtGfS6yfnV");</script>
+<script src="/js/Counter.js"></script>
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://www.dreamfish.online/img/logo_s.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">BeyondJSC</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">一只有梦想的咸鱼</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/BeyondJSC" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="/mail" title="mail">mail</a>
+					        
+								<a class="qq" target="_blank" href="/qq" title="qq">qq</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/deepin/" style="font-size: 10px;">deepin</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/前端，Vue/" style="font-size: 10px;">前端，Vue</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://znanjie.github.io">组长的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">BeyondJSC</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://www.dreamfish.online/img/logo_s.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">BeyondJSC</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">一只有梦想的咸鱼</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/BeyondJSC" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="/mail" title="mail">mail</a>
+			        
+						<a class="qq" target="_blank" href="/qq" title="qq">qq</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Vue爬坑之路（一）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/31/Vue爬坑之路（一）/" class="article-date">
+  	<time datetime="2018-08-31T07:51:09.000Z" itemprop="datePublished">2018-08-31</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Vue爬坑之路（一）
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端，Vue/">前端，Vue</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Vue/">Vue</a>
+	</div>
+
+
+        
+          
+<div class="counter-tag counter">
+    <span id="/2018/08/31/Vue爬坑之路（一）/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="Vue爬坑之路（一）">
+         &nbsp;
+        view
+    </span>
+</div>
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>简单却不失优雅，小巧而不乏大匠    </p>
+</blockquote>
+<p>​    Vue.js是一个JavaScript MVVM库，是一套构建用户界面的渐进式框架。它以数据驱动和组件化的思想构建，采用自底向上增量开发的设计。相比于Angular.js，Vue.js提供了更加简洁，更易于理解的API，使得我们能够快速上手并且使用Vue.js；同时比起React + Redux相对复杂的结构，Vue.js更加轻量级也更加容易上手，是初创项目的首选前端框架。Vue的核心库只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。并且作者是华人的关系，Vue拥有对华人开发者最友好的api文档和官方教程</p>
+<a id="more"></a>
+<h2 id="UI组件库"><a href="#UI组件库" class="headerlink" title="UI组件库"></a>UI组件库</h2><p>​    个人推荐学习“饿了么”团队推出的Element系列组件，目前为止element就是最好的支持vue2.0的UI组件，就像它的口号一样 ：“快速成型， 就为让你少加班”。</p>
+<h2 id="Vue中两个核心点"><a href="#Vue中两个核心点" class="headerlink" title="Vue中两个核心点"></a>Vue中两个核心点</h2><ul>
+<li><p>响应式数据绑定</p>
+<ul>
+<li><p>当数据发生变化，vue自动更新视图。它的原理是利用了Object.definedProperty中的setter/getter代理数据，监控对数据的操作（这也是为什么vue不支持ie8以及更早的ie浏览器的原因）。实例代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    pwd:<span class="string">'123456'</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj,<span class="string">'userName'</span>,&#123;</span><br><span class="line">    get:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"get init"</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    set:<span class="function"><span class="keyword">function</span>(<span class="params">val</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"set init"</span>);</span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">'uName'</span>).innerText = val;</span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">'userName'</span>).value = val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)；</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'userName'</span>).addEventListener(<span class="string">'keyup'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    obj.userName = e.target.value;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>组合的视图组件</p>
+<ul>
+<li><p>UI页面映射为组件树</p>
+</li>
+<li><p>划分组件可维护、可重用、可测试</p>
+<p><img src="https://img-blog.csdn.net/20170604172815171?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VieGlhb21h/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="视图组件"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="虚拟DOM"><a href="#虚拟DOM" class="headerlink" title="虚拟DOM"></a>虚拟DOM</h2><p>​    利用在内存中生成与真实DOM对应的数据结构，这个在内存中生成的结构称之为虚拟DOM。当数据发生变化时，能够智能的计算出重新渲染组件的最小代价并且应用到DOM操作上。vue就是利用了这一点。Vue渲染组件的步骤图：</p>
+<p>​    <img src="https://img-blog.csdn.net/20170604175120514?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VieGlhb21h/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="组件渲染步骤图"></p>
+<h2 id="MVVM模式"><a href="#MVVM模式" class="headerlink" title="MVVM模式"></a>MVVM模式</h2><p>​    不同与angular.js所谓的mvc模式的框架，即model、view、controller。vue是mvvm模式的框架，即：</p>
+<ul>
+<li><p>M：model（数据层， 也就是指数据）</p>
+</li>
+<li><p>V：view（也就是指DOM层或用户界面）</p>
+</li>
+<li><p>VM：view-model（处理数据和界面的中间层，也就是指Vue）</p>
+<p><img src="https://img-blog.csdn.net/20170604180151326?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2VieGlhb21h/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="mvvm模式"></p>
+</li>
+</ul>
+<h2 id="声明式渲染与命令式渲染"><a href="#声明式渲染与命令式渲染" class="headerlink" title="声明式渲染与命令式渲染"></a>声明式渲染与命令式渲染</h2><ul>
+<li>Vue是声明式渲染的， 也就是只需要关心声明在哪里（where）做什么（what），而不需要关心是如何实现的（how）</li>
+<li>命令式渲染，需要通过具体的代码表达在哪里（where）做什么（what），如何实现（how）</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><p>[vue官方文档]: <a href="https://cn.vuejs.org/v2/guide/index.html" target="_blank" rel="noopener">https://cn.vuejs.org/v2/guide/index.html</a></p>
+</li>
+<li><p>[vue的认识与介绍]: <a href="https://blog.csdn.net/webxiaoma/article/details/72853733" target="_blank" rel="noopener">https://blog.csdn.net/webxiaoma/article/details/72853733</a></p>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/31/建站过程中踩的坑/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">建站过程中踩过的坑</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2018 BeyondJSC
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
