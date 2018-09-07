@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>梦鱼的博客，读书笔记，前端-计算机组成原理（二） | 梦鱼的博客</title>
+
+  <!-- keywords -->
+  
+    <meta name="keywords" content="梦鱼的博客，读书笔记，前端">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="计算机的性能指标、什么是摩尔定律，该定律是否永远生效？、超级计算机、多核/并行处理器，云计算,  虚拟化">
+<meta name="keywords" content="计算机，计算机系统结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机组成原理（二）">
+<meta property="og:url" content="http://BeyondJSC.github.io/2018/09/06/计算机组成原理(二)/index.html">
+<meta property="og:site_name" content="梦鱼的博客">
+<meta property="og:description" content="计算机的性能指标、什么是摩尔定律，该定律是否永远生效？、超级计算机、多核/并行处理器，云计算,  虚拟化">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://img-blog.csdn.net/20180222233640745?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTWlyYWNsZXNzcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20180222234357800?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTWlyYWNsZXNzcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:updated_time" content="2018-09-07T07:56:47.462Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="计算机组成原理（二）">
+<meta name="twitter:description" content="计算机的性能指标、什么是摩尔定律，该定律是否永远生效？、超级计算机、多核/并行处理器，云计算,  虚拟化">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20180222233640745?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTWlyYWNsZXNzcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+  
+    <link rel="alternative" href="/atom.xml" title="梦鱼的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://www.dreamfish.online/img/logo_s.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+      <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("d6CNiUa2evYj0XUWSbI3CxY5-gzGzoHsz", "SK5PXdS93cAKOhwtGfS6yfnV");</script>
+<script src="/js/Counter.js"></script>
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://www.dreamfish.online/img/logo_s.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">BeyondJSC</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">一只有梦想的咸鱼</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/BeyondJSC" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="/mail" title="mail">mail</a>
+					        
+								<a class="qq" target="_blank" href="/qq" title="qq">qq</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/deepin/" style="font-size: 10px;">deepin</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/前端，Vue/" style="font-size: 20px;">前端，Vue</a> <a href="/tags/计算机，计算机系统结构/" style="font-size: 15px;">计算机，计算机系统结构</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://znanjie.github.io">组长的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">BeyondJSC</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://www.dreamfish.online/img/logo_s.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">BeyondJSC</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">一只有梦想的咸鱼</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/BeyondJSC" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="/mail" title="mail">mail</a>
+			        
+						<a class="qq" target="_blank" href="/qq" title="qq">qq</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-计算机组成原理(二)" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/06/计算机组成原理(二)/" class="article-date">
+  	<time datetime="2018-09-06T13:58:30.000Z" itemprop="datePublished">2018-09-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      计算机组成原理（二）
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计算机，计算机系统结构/">计算机，计算机系统结构</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/计算机组成与系统结构/">计算机组成与系统结构</a>
+	</div>
+
+
+        
+          
+<div class="counter-tag counter">
+    <span id="/2018/09/06/计算机组成原理(二)/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="计算机组成原理（二）">
+         &nbsp;
+        view
+    </span>
+</div>
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>计算机的性能指标、什么是摩尔定律，该定律是否永远生效？、超级计算机、多核/并行处理器，云计算,  虚拟化
+</code></pre><a id="more"></a>
+<h2 id="计算机性能指标"><a href="#计算机性能指标" class="headerlink" title="计算机性能指标"></a>计算机性能指标</h2><h3 id="运算速度"><a href="#运算速度" class="headerlink" title="运算速度"></a>运算速度</h3><pre><code>**CPU的主频**: 指计算机的时钟频率。它在很大程度上决定了计算机的运算速度。例如，Intel公司的CPU主频最高己达3.20GHz以上，AMD公司的可达400MHz以上。
+
+**字长**: CPU进行运算和数据处理的最基本、最有效的信息位长度。PC机的字长，已由8088的准16位(运算用16位，I／O用8位)发展到现在的32位、64位。
+
+**指令系统的合理性**:每种机器都设计了一套指令，一般均有数十条到上百条，例如：加、浮点加、逻辑与、跳转……等等，组成了指令系统。
+</code></pre><h3 id="存储器的指标"><a href="#存储器的指标" class="headerlink" title="存储器的指标"></a>存储器的指标</h3><pre><code>**存取速度**: 内存储器完成一次读(取)或写(存)操作所需的时间称为存储器的存取时间或者访问时间。而连续两次读(或写)所需的最短时间称为存储周期。对于半导体存储器来说，存取周期约为几十到几百ns(10-9秒)。
+</code></pre><p>​    <strong>存储容量</strong>: 存储容量一般用字节(Byte)数来度量。PC机的内存储器已由286机配置的1MB，发展到现在P4（奔腾4)配置256MB，甚至512MB以上。内存容量的加大，对于运行大型软件十分必要，否则会感到慢得无法忍受。</p>
+<h3 id="I-O的速度"><a href="#I-O的速度" class="headerlink" title="I/O的速度"></a>I/O的速度</h3><pre><code>主机I／O的速度，取决于I/O总线的设计。这对于慢速设备（例如键盘、打印机）关系不大，但对于高速设备则效果十分明显。例如对于当前的硬盘，它的外部传输率已可达20MB／S、4OMB／S以上。
+</code></pre><h2 id="什么是摩尔定律，该定律是否永远生效"><a href="#什么是摩尔定律，该定律是否永远生效" class="headerlink" title="什么是摩尔定律，该定律是否永远生效?"></a>什么是摩尔定律，该定律是否永远生效?</h2><p><a href="https://www.baidu.com/s?wd=%E6%91%A9%E5%B0%94%E5%AE%9A%E5%BE%8B&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">摩尔定律</a>（英语：Moore’s law）是由英特尔（Intel）创始人之一戈登·摩尔提出来的。其内容为：积体电路上可容纳的电晶体（晶体管）数目，约每隔两年便会增加一倍；经常被引用的“18个月”，是由英特尔首席执行官大卫·豪斯（David House）所说：预计18个月会将芯片的性能提高一倍（即更多的晶体管使其更快）。</p>
+<p>随着新工艺节点的不断推出，晶体管中原子的数量已经越来越少，种种物理极限制约着其进一步发展。比如当闸极长度足够短的时候，量子隧穿效应就会发生，会导致漏电流增加。关于<a href="https://www.baidu.com/s?wd=%E6%91%A9%E5%B0%94%E5%AE%9A%E5%BE%8B&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">摩尔定律</a>的终点究竟还有多远，看法并不一致。有预测认为<a href="https://www.baidu.com/s?wd=%E6%91%A9%E5%B0%94%E5%AE%9A%E5%BE%8B&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">摩尔定律</a>的极限将在2025年左右到来，但也有更乐观的预测认为还能持续更久。</p>
+<h2 id="超级计算机"><a href="#超级计算机" class="headerlink" title="超级计算机"></a>超级计算机</h2><pre><code>**超级计算机(chao ji ji suan ji)**：能够执行一般个人电脑无法处理的大资料量与高速运算的电脑。其基本组成组件与个人电脑的概念无太大差异，但规格与性能则强大许多，是一种超大型电子计算机。具有很强的计算和处理数据的能力，主要特点表现为高速度和大容量，配有多种外部和外围设备及丰富的、高功能的软件系统。现有的超级计算机运算速度大都可以达到每秒一太(Trillion,万亿)次以上。
+
+中国在超级计算机方面发展迅速，跃升到国际先进水平国家当中。中国是第一个以发展中国家的身份制造了超级计算机的国家，2011年中国拥有世界最快的500个超级计算机中的74个。中国在1983年就研制出第一台超级计算机银河一号，使中国成为继美国、日本之后第三个能独立设计和研制超级计算机的国家。中国以国产微处理器为基础制造出本国第一台超级计算机名为&quot;神威蓝光&quot;，部署于天津滨海新区的国家超级计算天津中心的业务主机天河一号和曙光计算机天津产业基地生产的曙光星云，分别为世界超级计算机运算速度排名的第二和第四名。
+</code></pre><h2 id="多核单cpu与多线程并行计算"><a href="#多核单cpu与多线程并行计算" class="headerlink" title="多核单cpu与多线程并行计算"></a>多核单cpu与多线程并行计算</h2><h3 id="并发和并行"><a href="#并发和并行" class="headerlink" title="并发和并行"></a>并发和并行</h3><pre><code>从宏观上来讲都是同时处理多路请求的概念。但并发和并行又有区别，并行是指两个或者多个事件在**同一时刻发生**；而并发是指两个或多个事件在**同一时间间隔内发生**，由CPU时间片进行切换。
+</code></pre><h3 id="多核单CPU"><a href="#多核单CPU" class="headerlink" title="多核单CPU"></a>多核单CPU</h3><pre><code>先看看“核”是什么吧？
+
+核（Die）又称为内核，是CPU最重要的组成部分。CPU中心那块隆起的芯片就是核心，是由单晶硅以一定的生产工艺制造出来的，CPU所有的计算、接受/存储命令、处理数据都由核心执行。各种CPU核心都具有固定的逻辑结构，一级缓存、二级缓存、执行单元、指令级单元和总线接口等逻辑单元都会有科学的布局。
+
+多核单CPU只需要一套芯片组，一套存储，多核之间通过芯片内部总线进行通信，共享使用内存。在这样的架构上，如果我们跑一个多线程的程序，那么线程间通信将比上一种情形更快。如果最终实现出来，对板上空间的占用较小，布局布线的压力也较小。另一方面多核是指在一个处理器上集成多个个运算核心，从而提高计算能力。
+</code></pre><h2 id="云计算"><a href="#云计算" class="headerlink" title="云计算"></a>云计算</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><pre><code>云计算是基于互联网的相关服务的增加、使用和交付模式，通常涉及通过互联网来提供动态易扩展且经常是虚拟化的资源。云是网络、互联网的一种比喻说法。过去在图中往往用云来表示电信网，后来也用来表示互联网和底层基础设施的抽象。因此，云计算甚至可以让你体验每秒10万亿次的运算能力，拥有这么强大的计算能力可以模拟核爆炸、预测气候变化和市场发展趋势。用户通过电脑、笔记本、手机等方式接入数据中心，按自己的需求进行运算。
+
+云计算是分布式运算、并行计算、效用计算、网络储存、虚拟化、负载均衡、热备份冗余等传统计算机和网络技术发展融合产物
+
+云计算关键技术包括：**虚拟化**、**分布式存储**、**分布式计算**、**多租户**等
+</code></pre><p><img src="https://img-blog.csdn.net/20180222233640745?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTWlyYWNsZXNzcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="云计算"></p>
+<h3 id="云计算产业"><a href="#云计算产业" class="headerlink" title="云计算产业"></a>云计算产业</h3><pre><code>云计算产业作为战略性新兴产业，近些年得到了迅速发展，形成了成熟的产业链结构，产业涵盖硬件与设备制造、基础设施运营、软件与解决方案供应商、基础设施即服务（IaaS）、平台即服务（PaaS）、软件即服务（SaaS）、终端设备、云安全、云计算交付/咨询/认证等环节
+</code></pre><p><img src="https://img-blog.csdn.net/20180222234357800?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTWlyYWNsZXNzcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="云计算产业"></p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><pre><code>一些必备的知识储备, 如有侵权, 敬请告知
+</code></pre>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/09/06/计算机组成原理(一)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">计算机组成原理（一）</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2018 BeyondJSC
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
