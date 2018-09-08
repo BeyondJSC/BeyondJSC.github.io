@@ -20,8 +20,9 @@
 <meta property="og:description" content="简单却不失优雅，小巧而不乏大匠      ​    Vue.js是一个JavaScript MVVM库，是一套构建用户界面的渐进式框架。它以数据驱动和组件化的思想构建，采用自底向上增量开发的设计。相比于Angular.js，Vue.js提供了更加简洁，更易于理解的API，使得我们能够快速上手并且使用Vue.js；同时比起React + Redux相对复杂的结构，Vue.js更加轻量级也更加容易上">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.dreamfish.online/img/view-component.png">
+<meta property="og:image" content="http://www.dreamfish.online/img/virtual-dom.png">
 <meta property="og:image" content="http://www.dreamfish.online/img/mvvm.png">
-<meta property="og:updated_time" content="2018-09-08T06:13:32.831Z">
+<meta property="og:updated_time" content="2018-09-08T06:15:42.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue爬坑之路（一）">
 <meta name="twitter:description" content="简单却不失优雅，小巧而不乏大匠      ​    Vue.js是一个JavaScript MVVM库，是一套构建用户界面的渐进式框架。它以数据驱动和组件化的思想构建，采用自底向上增量开发的设计。相比于Angular.js，Vue.js提供了更加简洁，更易于理解的API，使得我们能够快速上手并且使用Vue.js；同时比起React + Redux相对复杂的结构，Vue.js更加轻量级也更加容易上">
@@ -271,7 +272,7 @@
 </li>
 </ul>
 <h2 id="虚拟DOM"><a href="#虚拟DOM" class="headerlink" title="虚拟DOM"></a>虚拟DOM</h2><p>​    利用在内存中生成与真实DOM对应的数据结构，这个在内存中生成的结构称之为虚拟DOM。当数据发生变化时，能够智能的计算出重新渲染组件的最小代价并且应用到DOM操作上。vue就是利用了这一点。Vue渲染组件的步骤图：</p>
-<p>​    ![组件渲染步骤图](<a href="http://www.dreamfish.online/img/virtual-dom.png" target="_blank" rel="noopener">http://www.dreamfish.online/img/virtual-dom.png</a></p>
+<p>​    <img src="http://www.dreamfish.online/img/virtual-dom.png" alt="组件渲染步骤图"></p>
 <h2 id="MVVM模式"><a href="#MVVM模式" class="headerlink" title="MVVM模式"></a>MVVM模式</h2><p>​    不同与angular.js所谓的mvc模式的框架，即model、view、controller。vue是mvvm模式的框架，即：</p>
 <ul>
 <li><p>M：model（数据层， 也就是指数据）</p>
